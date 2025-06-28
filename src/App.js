@@ -26,8 +26,8 @@ const App = () => {
     e.preventDefault();
     const url =
       accountType === "signup"
-        ? "http://localhost:5000/api/v1/auth/register"
-        : "http://localhost:5000/api/v1/auth/login";
+        ? "https://excel-contact-messenger.onrender.com/api/v1/auth/register"
+        : "https://excel-contact-messenger.onrender.com/api/v1/auth/login";
 
     const payload =
       accountType === "signup"
@@ -59,7 +59,7 @@ const App = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/upload",
+        "https://excel-contact-messenger.onrender.com/api/v1/upload",
         form,
         {
           headers: {
@@ -90,7 +90,7 @@ const App = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/send-whatsapp",
+        "https://excel-contact-messenger.onrender.com/api/v1/send-whatsapp",
         {
           contacts,
           messageTemplate: "Hello [Name], welcome to Excel Contact Messenger!",
@@ -121,7 +121,7 @@ const App = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/send-emails",
+        "https://excel-contact-messenger.onrender.com/api/v1/send-emails",
         {
           subject: "Welcome to Excel Contact Messenger",
           messageTemplate:
